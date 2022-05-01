@@ -1,0 +1,460 @@
+{
+  "id": "f85d7dbb-7190-46e5-826f-68956223d7d8",
+  "version": "2.0",
+  "name": "Test FireflyIII",
+  "url": "https://fintech-testlab.coderslab.pl",
+  "tests": [{
+    "id": "67c3eecb-3da2-4faf-9d30-ad82d2b096e0",
+    "name": "Dodanie nowego rachunku do konta",
+    "commands": [{
+      "id": "569aa5f8-9368-4a2e-9252-fd9f51777815",
+      "comment": "",
+      "command": "open",
+      "target": "https://fintech-testlab.coderslab.pl/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3c0e199-5544-41ac-a8d0-dd35a79ef92d",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03d4c1c4-8f75-4754-a1e3-03ba715700f8",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "testowy!@gmail.com"
+    }, {
+      "id": "c7bc2b7e-1cf8-43ff-aeb4-ab03eb4bf146",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce711e53-56d1-46e0-aca6-0daa133b2a6c",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "n5q445r7y87kYXj0"
+    }, {
+      "id": "771f79a3-8387-46e2-addb-c7decdbb6114",
+      "comment": "",
+      "command": "click",
+      "target": "name=remember",
+      "targets": [
+        ["name=remember", "name"],
+        ["css=label > input", "css:finder"],
+        ["xpath=//input[@name='remember']", "xpath:attributes"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d02a82b-8b2d-4177-a014-8c88fc815a5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26e24445-d209-429f-a230-ef68f78c0654",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sidebar-menu > li:nth-child(4) span:nth-child(2)",
+      "targets": [
+        ["css=.sidebar-menu > li:nth-child(4) span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/aside/section/ul/li[4]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Rachunki')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9572c41e-fb1e-42d0-9016-1f293bb66f97",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Utwórz nowy rachunek",
+      "targets": [
+        ["linkText=Utwórz nowy rachunek", "linkText"],
+        ["css=div:nth-child(1) > .btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Utwórz nowy rachunek')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/section[2]/div/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://fintech-testlab.coderslab.pl/bills/create')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Utwórz nowy rachunek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "680a2918-bdfa-48c5-aa12-bfc961ea8f2e",
+      "comment": "",
+      "command": "click",
+      "target": "id=ffInput_name",
+      "targets": [
+        ["id=ffInput_name", "id"],
+        ["name=name", "name"],
+        ["css=#ffInput_name", "css:finder"],
+        ["xpath=//input[@id='ffInput_name']", "xpath:attributes"],
+        ["xpath=//div[@id='name_holder']/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a62576a-586a-48c9-9cfe-7780e257fa3b",
+      "comment": "ID rachunku",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 100000);",
+      "targets": [],
+      "value": "zakres"
+    }, {
+      "id": "90c4ce3f-dbd5-4335-8b96-19de07b7ea1b",
+      "comment": "",
+      "command": "type",
+      "target": "id=ffInput_name",
+      "targets": [
+        ["id=ffInput_name", "id"],
+        ["name=name", "name"],
+        ["css=#ffInput_name", "css:finder"],
+        ["xpath=//input[@id='ffInput_name']", "xpath:attributes"],
+        ["xpath=//div[@id='name_holder']/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "Rachunek testowy ID_${zakres}"
+    }, {
+      "id": "f83edbbd-18d1-4399-b7e7-a7311ac3c6a0",
+      "comment": "",
+      "command": "echo",
+      "target": "Rachunek testowy ID_${zakres}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef201aa5-104e-4953-8e5b-61a6634c32e2",
+      "comment": "",
+      "command": "click",
+      "target": "id=ffInput_transaction_currency_id",
+      "targets": [
+        ["id=ffInput_transaction_currency_id", "id"],
+        ["name=transaction_currency_id", "name"],
+        ["css=#ffInput_transaction_currency_id", "css:finder"],
+        ["xpath=//select[@id='ffInput_transaction_currency_id']", "xpath:attributes"],
+        ["xpath=//div[@id='transaction_currency_id_holder']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38ee01b6-c490-4f03-9891-83272d1564e2",
+      "comment": "",
+      "command": "store",
+      "target": "Polish złoty (zł)",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "d87db77d-4e47-4cde-898f-04405dd0b963",
+      "comment": "",
+      "command": "store",
+      "target": "Brazilian real (R$)",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "ec3c7049-1aab-4414-ae98-0f97ac7da6a6",
+      "comment": "",
+      "command": "store",
+      "target": "Euro (€)",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "f8b91c32-011d-4a6e-bf38-cb960ee64f52",
+      "comment": "",
+      "command": "select",
+      "target": "id=ffInput_transaction_currency_id",
+      "targets": [],
+      "value": "label=${1}"
+    }, {
+      "id": "b7f1cb63-6b23-4705-bc78-520f55924868",
+      "comment": "",
+      "command": "click",
+      "target": "id=ffInput_amount_min",
+      "targets": [
+        ["id=ffInput_amount_min", "id"],
+        ["name=amount_min", "name"],
+        ["css=#ffInput_amount_min", "css:finder"],
+        ["xpath=//input[@id='ffInput_amount_min']", "xpath:attributes"],
+        ["xpath=//div[@id='amount_min_holder']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b31d361b-afcb-45f0-8519-6ac1d9acf3d1",
+      "comment": "minimalna kwota z zakresu 1-100",
+      "command": "executeScript",
+      "target": "return Math.floor((Math.random() * 100)+1);",
+      "targets": [],
+      "value": "minimalna_kwota"
+    }, {
+      "id": "abc2c1f5-91d5-4d78-a9c4-d5a405296fc7",
+      "comment": "",
+      "command": "type",
+      "target": "id=ffInput_amount_min",
+      "targets": [],
+      "value": "${minimalna_kwota}"
+    }, {
+      "id": "738a5ebc-2301-45c6-b858-11504b53988f",
+      "comment": "",
+      "command": "click",
+      "target": "id=ffInput_amount_max",
+      "targets": [
+        ["id=ffInput_amount_max", "id"],
+        ["name=amount_max", "name"],
+        ["css=#ffInput_amount_max", "css:finder"],
+        ["xpath=//input[@id='ffInput_amount_max']", "xpath:attributes"],
+        ["xpath=//div[@id='amount_max_holder']/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a816d1c6-889a-4576-8a18-5a8344f2b188",
+      "comment": "maksymalna kwota z zakresu 1-1000",
+      "command": "executeScript",
+      "target": "return Math.floor((Math.random() * 1000)+1);",
+      "targets": [],
+      "value": "maksymalna_kwota"
+    }, {
+      "id": "d40126b6-0492-4553-9adc-b6d88187dfda",
+      "comment": "",
+      "command": "type",
+      "target": "id=ffInput_amount_max",
+      "targets": [
+        ["id=ffInput_amount_max", "id"],
+        ["name=amount_max", "name"],
+        ["css=#ffInput_amount_max", "css:finder"],
+        ["xpath=//input[@id='ffInput_amount_max']", "xpath:attributes"],
+        ["xpath=//div[@id='amount_max_holder']/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "${maksymalna_kwota}"
+    }, {
+      "id": "cf2aaf28-7aa3-42b6-8e81-67e64995df9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=ffInput_date",
+      "targets": [
+        ["id=ffInput_date", "id"],
+        ["name=date", "name"],
+        ["css=#ffInput_date", "css:finder"],
+        ["xpath=//input[@id='ffInput_date']", "xpath:attributes"],
+        ["xpath=//div[@id='date_holder']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c87dd5d7-4296-4e5b-8ab5-6ba9f1358f62",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor((Math.random() * 29)+1);",
+      "targets": [],
+      "value": "dzien"
+    }, {
+      "id": "c897c37b-b81c-4bf6-aed9-1a250381121b",
+      "comment": "",
+      "command": "type",
+      "target": "id=ffInput_date",
+      "targets": [
+        ["id=ffInput_date", "id"],
+        ["name=date", "name"],
+        ["css=#ffInput_date", "css:finder"],
+        ["xpath=//input[@id='ffInput_date']", "xpath:attributes"],
+        ["xpath=//div[@id='date_holder']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/input", "xpath:position"]
+      ],
+      "value": "2022-04-${dzien}"
+    }, {
+      "id": "92bf9560-bb42-41ff-85ba-20aab36adffa",
+      "comment": "",
+      "command": "click",
+      "target": "id=ffInput_repeat_freq",
+      "targets": [
+        ["id=ffInput_repeat_freq", "id"],
+        ["name=repeat_freq", "name"],
+        ["css=#ffInput_repeat_freq", "css:finder"],
+        ["xpath=//select[@id='ffInput_repeat_freq']", "xpath:attributes"],
+        ["xpath=//div[@id='repeat_freq_holder']/div/select", "xpath:idRelative"],
+        ["xpath=//div[6]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a25a5b47-7090-43c0-b8b5-06f6278c2cce",
+      "comment": "",
+      "command": "store",
+      "target": "tygodniowo",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "39143c05-55b7-4bce-9c21-add214d0f934",
+      "comment": "",
+      "command": "store",
+      "target": "miesięcznie",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "5f3e2b7a-dcf2-4606-8a86-5d15a76ed0a2",
+      "comment": "",
+      "command": "store",
+      "target": "kwartalnie",
+      "targets": [],
+      "value": "3"
+    }, {
+      "id": "43ecc951-597f-47d8-8ca1-7e97578b61ca",
+      "comment": "",
+      "command": "store",
+      "target": "co pół roku",
+      "targets": [],
+      "value": "4"
+    }, {
+      "id": "8fabe47c-c483-426f-8750-04952cf6d06c",
+      "comment": "",
+      "command": "store",
+      "target": "rocznie",
+      "targets": [],
+      "value": "5"
+    }, {
+      "id": "8d07476b-5b95-4941-887d-9f139a400e3b",
+      "comment": "",
+      "command": "select",
+      "target": "id=ffInput_repeat_freq",
+      "targets": [],
+      "value": "label=${2}"
+    }, {
+      "id": "1aa3a027-54df-48e7-8c5c-23582cfd537b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='store']/div[2]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Zapisz nowy rachunek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bef72c1a-2c8a-48a7-86df-c2f613491f70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sidebar-menu > li:nth-child(4) span:nth-child(2)",
+      "targets": [
+        ["css=.sidebar-menu > li:nth-child(4) span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/aside/section/ul/li[4]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Rachunki')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64aaee36-0be8-4d79-9be5-247c331be85a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rachunek testowy ID_${zakres}",
+      "targets": [
+        ["linkText=Rachunek testowy ID_12", "linkText"],
+        ["css=.bill-sortable:nth-child(2) > td > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Rachunek testowy ID_12')]", "xpath:link"],
+        ["xpath=//table[@id='bill-sortable']/tbody/tr[2]/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://fintech-testlab.coderslab.pl/bills/show/43')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rachunek testowy ID_12')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c99b9822-3f8d-4d68-97a5-fa27387d4fec",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#billInfo .box-title",
+      "targets": [
+        ["css=#billInfo .box-title", "css:finder"],
+        ["xpath=//div[@id='billInfo']/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Rachunek testowy ID_12')]", "xpath:innerText"]
+      ],
+      "value": "Rachunek testowy ID_${zakres}"
+    }, {
+      "id": "d0f33e37-40e8-4e6b-aa04-82223784f3ac",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.text-success:nth-child(1)",
+      "targets": [
+        ["css=.text-success:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='billInfo']/div[2]/table/tbody/tr/td/span", "xpath:idRelative"],
+        ["xpath=//td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'900,00 zł')]", "xpath:innerText"]
+      ],
+      "value": "${minimalna_kwota},00 zł"
+    }, {
+      "id": "dba772a7-61c6-41bc-8ffd-f1e8acb76e2c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.text-success:nth-child(2)",
+      "targets": [
+        ["css=.text-success:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='billInfo']/div[2]/table/tbody/tr/td/span[2]", "xpath:idRelative"],
+        ["xpath=//td/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'4 227,00 zł')]", "xpath:innerText"]
+      ],
+      "value": "${maksymalna_kwota},00 zł"
+    }, {
+      "id": "438ac9a1-5cb6-400f-a207-d24da92b352e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='billInfo']/div[2]/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,' Tak')]", "xpath:innerText"]
+      ],
+      "value": "Tak"
+    }, {
+      "id": "e84195c4-8fee-4cee-96cf-421c17765db8",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(15) span:nth-child(2)",
+      "targets": [
+        ["css=li:nth-child(15) span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/aside/section/ul/li[15]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[15]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Wyloguj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a3b2dc2b-3b43-498e-ae41-4f041c403325",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["67c3eecb-3da2-4faf-9d30-ad82d2b096e0"]
+  }],
+  "urls": ["https://fintech-testlab.coderslab.pl/"],
+  "plugins": []
+}
